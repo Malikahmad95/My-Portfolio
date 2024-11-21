@@ -1,0 +1,927 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: #ff4f00;
+    color: #fff;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img{
+    width: 40px;
+    margin-right: 5px;
+}
+
+#navbarNav {
+    display: flex;
+    gap: 15px;
+}
+
+#navbarNav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#navbarNav a:hover {
+    color: #ddd;
+}
+
+/* Navbar for small screens */
+.bi.bi-list {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+
+/* Navbar for small screens */
+@media (max-width: 768px) {
+    #navbarNav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 69px;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #444;
+        transition: right 0.3s ease;
+        z-index: 10;
+        padding-top: 60px;
+    }
+
+    #navbarNav.show {
+        right: 0;
+    }
+
+    .bi.bi-list {
+        display: block;
+    }
+}
+
+
+/* Hero Section Styling */
+.hero {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: clamp(24px, 5vw, 48px);
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+p {
+    font-size: clamp(10px, 2vw, 16px);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    color: white;
+    height: clamp(40px, 5vw, 60px);
+    width: clamp(160px, 15vw, 180px);
+    cursor: pointer;
+    font-size: clamp(10px, 2vw, 16px);
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.hire-btn {
+    background: linear-gradient(135deg, #ff5c00, #ff7e00, #ff5c00);
+}
+
+.cv-btn {
+    border: 2px solid #ff7e00;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    background-color: #ff5c00;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.auto-type {
+    font-size: clamp(10px, 3vw, 24px);
+    color: #ff7e00;
+}
+
+/* Stats Section Styling */
+.stats {
+    width: 100%;
+    padding: 8% 5%;
+    background-color: #555;
+}
+
+.stat {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.5s;
+    position: relative;
+    padding: 30px;
+    z-index: 100;
+    background-image: linear-gradient(90deg, #ff7e00 50%, #333 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    border-radius: 50%;
+}
+
+.stat i {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 3rem;
+    color: #ff7e00;
+    background-color: #555;
+    transition: all 0.5s;
+    background-color: none;
+}
+
+.stat p {
+    font-size: 1.1rem;
+    color: #ff8000b7;
+    transition: all 0.5s;
+}
+
+.stat:hover {
+    background-position: 0 0;
+}
+
+.stat:hover i,
+.stat:hover p {
+    color: #fff;
+}
+
+
+.stat h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.row {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust the layout for mobile devices */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* About Section Styling */
+.about {
+    width: 100%;
+    padding: 8% 5%;
+    background-color: #333;
+}
+
+.about .about-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-row .image {
+    width: 30%;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-row .content {
+    width: 60%;
+}
+
+.content h2 {
+    font-size: clamp(24px, 5vw, 44px);
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ff7e00;
+}
+
+.content p {
+    font-size: clamp(14px, 3vw, 18px);
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.content .btn {
+    border: 2px solid #ff7e00;
+    background-color: transparent;
+    color: white;
+    height: clamp(40px, 5vw, 60px);
+    width: clamp(140px, 15vw, 180px);
+    cursor: pointer;
+    font-size: clamp(10px, 2vw, 16px);
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s
+}
+
+.content .btn:hover {
+    background-color: #ff7e00;
+}
+
+@media (max-width: 768px) {
+    .about-row {
+        padding: 50px 0px;
+    }
+
+    .about-row,
+    .about-row .content,
+    .about-row .image {
+        gap: 30px;
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+/* Services Section Styling */
+.services {
+    width: 100%;
+    padding: 8% 5%;
+    background-color: #555;
+}
+
+.services h2 {
+    font-size: clamp(34px, 5vw, 48px);
+    font-weight: bold;
+    color: #ff7e00;
+    margin-bottom: 50px;
+}
+
+.services-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.services-card {
+    width: 30%;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.services-card .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    background-color: #333;
+    border-radius: 15px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff7e00;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    font-size: 3rem;
+    color: #333;
+}
+
+.card-body .card-title {
+    font-size: clamp(16px, 2vw, 20px);
+    color: #fff;
+    margin-top: 20px;
+}
+
+.card-body .card-text {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 15px;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .services-row {
+        flex-direction: column;
+        padding: 50px 0px;
+    }
+
+    .services-card {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+}
+
+
+/* Skills Section Styling */
+.skills {
+    width: 100%;
+    padding: 8% 5%;
+    background-color: #333;
+}
+
+.skills-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills h2 {
+    font-size: clamp(34px, 5vw, 48px);
+    font-weight: bold;
+    color: #ff7e00;
+    margin-bottom: 50px;
+}
+
+.skills-card {
+    width: 30%;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skills-card .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    background-color: #555;
+    border-radius: 15px;
+}
+
+.skills-card .card-body i {
+    height: 70px;
+    width: 70px;
+    font-size: 3rem;
+    color: #ff7e00;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.skills-card .card-title {
+    font-size: clamp(16px, 3vw, 24px);
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.skills-card .text-center {
+    color: #ccc;
+    margin-top: 20px;
+}
+
+/* General Styling for Progress Bars */
+progress {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Default background for progress bars (unfilled part) */
+progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+/* Customizing the filled part of the progress bar (value) */
+progress::-webkit-progress-value {
+    border-radius: 10px;
+}
+
+/* For Firefox */
+progress::-moz-progress-value {
+    border-radius: 10px;
+}
+
+/* Custom Color Schemes for Different Skills */
+
+/* HTML */
+#html::-webkit-progress-value {
+    background-color: #e34f26;
+}
+
+/* Orange for HTML */
+#html::-moz-progress-value {
+    background-color: #e34f26;
+}
+
+/* CSS */
+#css::-webkit-progress-value {
+    background-color: #264de4;
+}
+
+/* Blue for CSS */
+#css::-moz-progress-value {
+    background-color: #264de4;
+}
+
+/* JavaScript */
+#js::-webkit-progress-value {
+    background-color: #f7df1e;
+}
+
+/* Yellow for JavaScript */
+#js::-moz-progress-value {
+    background-color: #f7df1e;
+}
+
+/* Bootstrap */
+#bootstrap::-webkit-progress-value {
+    background-color: #563d7c;
+}
+
+/* Purple for Bootstrap */
+#bootstrap::-moz-progress-value {
+    background-color: #563d7c;
+}
+
+/* Canva */
+#canva::-webkit-progress-value {
+    background-color: #00c4cc;
+}
+
+/* Teal for Canva */
+#canva::-moz-progress-value {
+    background-color: #00c4cc;
+}
+
+/* Photoshop */
+#photoshop::-webkit-progress-value {
+    background-color: #31a8ff;
+}
+
+/* Light blue for Photoshop */
+#photoshop::-moz-progress-value {
+    background-color: #31a8ff;
+}
+
+/* Facebook Ads */
+#facebook-ads::-webkit-progress-value {
+    background-color: #3b5998;
+}
+
+/* Facebook Blue */
+#facebook-ads::-moz-progress-value {
+    background-color: #3b5998;
+}
+
+/* Instagram Ads */
+#instagram-ads::-webkit-progress-value {
+    background-color: #e4405f;
+}
+
+/* Instagram Pink */
+#instagram-ads::-moz-progress-value {
+    background-color: #e4405f;
+}
+
+/* LinkedIn Ads */
+#linkedin-ads::-webkit-progress-value {
+    background-color: #0077b5;
+}
+
+/* LinkedIn Blue */
+#linkedin-ads::-moz-progress-value {
+    background-color: #0077b5;
+}
+
+/* TikTok Ads */
+#tiktok-ads::-webkit-progress-value {
+    background-color: #010101;
+}
+
+/* TikTok Black */
+#tiktok-ads::-moz-progress-value {
+    background-color: #010101;
+}
+
+/* YouTube Ads */
+#youtube-ads::-webkit-progress-value {
+    background-color: #ff0000;
+}
+
+/* YouTube Red */
+#youtube-ads::-moz-progress-value {
+    background-color: #ff0000;
+}
+
+/* Google Ads */
+#google-ads::-webkit-progress-value {
+    background-color: #4285f4;
+}
+
+/* Google Blue */
+#google-ads::-moz-progress-value {
+    background-color: #4285f4;
+}
+
+/* Google Search Console */
+#google-search-console::-webkit-progress-value {
+    background-color: #fbbc05;
+}
+
+/* Google Yellow */
+#google-search-console::-moz-progress-value {
+    background-color: #fbbc05;
+}
+
+/* Google Tag Manager */
+#google-tag-manager::-webkit-progress-value {
+    background-color: #ff6f00;
+}
+
+/* Google Tag Manager Orange */
+#google-tag-manager::-moz-progress-value {
+    background-color: #ff6f00;
+}
+
+@media (max-width: 768px) {
+    .skills-card {
+        width: 45%;
+    }
+
+    .skills-card .card-body i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        font-size: 1.5rem;
+        color: #ff7e00;
+        background-color: #333;
+        border-radius: 50%;
+    }
+}
+
+
+/* Projects Section Styling */
+.projects {
+    width: 100%;
+    padding: 8% 5%;
+    background-color: #555;
+    height: auto;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff7e00;
+    margin-bottom: 50px;
+}
+
+.projects-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projects-card {
+    width: 30%;
+    border: none;
+    background-color: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.projects-card .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    background-color: #333;
+    border-radius: 15px;
+}
+
+.projects-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+
+}
+
+.card-body {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.projects-card .card-title {
+    font-size: clamp(24px, 4vw, 18px);
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ff7e00;
+}
+
+.projects-card .sub-card-title {
+    font-size: clamp(8px, 2vw, 10px);
+    color: #ff7e00;
+}
+
+.projects-card .card-text {
+    font-size: clamp(10px, 2vw, 14px);
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .projects-card {
+        width: 100%;
+    }
+}
+
+
+/* Contact Section Styling */
+.contact {
+    width: 100%;
+    padding: 8% 5%;
+    background-color: #333;
+    height: auto;
+}
+
+.contact-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff7e00;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    width: 40%;
+    background-color: #555;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+    font-size: 1.75rem;
+    color: #ff7e00;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contact-info ul li {
+    font-size: clamp(10px, 2vw, 14px);
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.contact-info ul li strong {
+    font-weight: bold;
+    color: #ff7e00;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    width: 50%;
+    background-color: #555;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ff7e00;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #333;
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: #ff7e00;
+    resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff7e00;
+    outline: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff800077;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.contact-form button:hover {
+    background-color: #ff7e00;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+
+    .contact-form,
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form button {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 3px solid #ff7e00;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links .social-link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.social-links .social-link i {
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+.social-links .social-link:hover {
+    color: #5cb85c;
+}
+
+.social-links .facebook:hover {
+    color: #3b5998;
+}
+
+.social-links .whatsapp:hover {
+    color: #25d366;
+}
+
+.social-links .linkedin:hover {
+    color: #0077b5;
+}
+
+/* Responsive Footer */
+@media (max-width: 767px) {
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-links .social-link {
+        font-size: 1.1rem;
+        margin: 0 10px;
+    }
+}

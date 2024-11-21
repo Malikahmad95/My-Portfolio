@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./images/Favicon/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Muneeb!</title>
+    <!-- Bootstrap CSS (for layout and components) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons (for icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-bottom">
+            <h2 id="heading"><img class="logo-img" src="./images/mamlogodark.png" alt="Malik Ahmad">Portfolio</h2>
+            <i class="bi bi-list" onclick="toggleMenu()"></i>
+            <nav id="navbarNav">
+                <a onclick="toggleMenu()" href="#hero">Home</a>
+                <a onclick="toggleMenu()" href="#about">About</a>
+                <a onclick="toggleMenu()" href="#services">Services</a>
+                <a onclick="toggleMenu()" href="#skills">Skills</a>
+                <a onclick="toggleMenu()" href="#projects">Projects</a>
+                <a onclick="toggleMenu()" href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Ahmad Muneeb</h1>
+            <span class="auto-type">Web Developer</span>
+            <p>Front-End Developer | Crafting engaging, responsive, and visually stunning web experiences that
+                prioritize user interaction and accessibility. Passionate about blending creativity with technology to
+                deliver seamless and user-friendly digital solutions.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn hire-btn">Hire Me</a>
+                <a href="Black Modern Professional Resume_2.pdf" class="btn cv-btn" download><i
+                        class="fas fa-download"></i> &nbsp; Download CV</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Stats Section -->
+    <section class="stats py-5" id="stats">
+        <div class="container">
+            <div class="row text-center">
+                <div class="stat">
+                    <i class="bi bi-briefcase-fill mb-3"></i>
+                    <h2 id="projects-count">0</h2>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat">
+                    <i class="bi bi-person-check-fill mb-3"></i>
+                    <h2 id="clients-count">0</h2>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat">
+                    <i class="bi bi-clock-fill mb-3"></i>
+                    <h2 id="experience-count">0</h2>
+                    <p>Years of Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-row">
+            <div class="image">
+                <img src="images/my img.png" alt="About Us" class="img-3">
+            </div>
+            <div class="content">
+                <h2>About Me</h2>
+                <p>I am a versatile professional skilled in Digital Marketing, Graphics Design, and MERN Stack
+                    Development. I create impactful digital marketing strategies that drive results, design
+                    visually stunning graphics that connect with audiences, and develop dynamic web applications
+                    using the latest MERN stack technologies.With a passion for creativity and technical
+                    expertise, I deliver comprehensive solutions that elevate brands. Let’s collaborate and
+                    bring your ideas to life!</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="text-center mb-5">Our Services</h2>
+        <div class="services-row">
+            <div class="services-card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-code-slash icon mb-3"></i>
+                    <h3 class="card-title">Web Development</h3>
+                    <p class="card-text">Build modern, responsive websites tailored to your needs.</p>
+                </div>
+            </div>
+            <div class="services-card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-palette icon mb-3"></i>
+                    <h3 class="card-title">Graphic Design</h3>
+                    <p class="card-text">Design visually appealing graphics for your brand.</p>
+                </div>
+            </div>
+            <div class="services-card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-broadcast icon mb-3"></i>
+                    <h3 class="card-title">Digital Marketing</h3>
+                    <p class="card-text">Promote your business through innovative digital marketing strategies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section class="skills py-5" id="skills">
+        <h2 class="text-center mb-5">My Skills</h2>
+        <div class="skills-row">
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-code-slash mb-3"></i>
+                    <h5 class="card-title">HTML</h5>
+                    <progress id="html" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="html-percent">0%</div>
+                </div>
+            </div>
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-palette mb-3"></i>
+                    <h5 class="card-title">CSS</h5>
+                    <progress id="css" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="css-percent">0%</div>
+                </div>
+            </div>
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-braces mb-3"></i>
+                    <h5 class="card-title">JavaScript</h5>
+                    <progress id="js" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="js-percent">0%</div>
+                </div>
+            </div>
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-bootstrap mb-3"></i>
+                    <h5 class="card-title">Bootstrap</h5>
+                    <progress id="bootstrap" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="bootstrap-percent">0%</div>
+                </div>
+            </div>
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-images mb-3"></i>
+                    <h5 class="card-title">Canva</h5>
+                    <progress id="canva" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="canva-percent">0%</div>
+                </div>
+            </div>
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-camera-reels mb-3"></i>
+                    <h5 class="card-title">Photoshop</h5>
+                    <progress id="photoshop" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="photoshop-percent">0%</div>
+                </div>
+            </div>
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-facebook mb-3"></i>
+                    <h5 class="card-title">Facebook Ads</h5>
+                    <progress id="facebook-ads" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="facebook-ads-percent">0%</div>
+                </div>
+            </div>
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-instagram mb-3"></i>
+                    <h5 class="card-title">Instagram Ads</h5>
+                    <progress id="instagram-ads" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="instagram-ads-percent">0%</div>
+                </div>
+            </div>
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-linkedin mb-3"></i>
+                    <h5 class="card-title">LinkedIn Ads</h5>
+                    <progress id="linkedin-ads" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="linkedin-ads-percent">0%</div>
+                </div>
+            </div>
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-tiktok mb-3"></i>
+                    <h5 class="card-title">TikTok Ads</h5>
+                    <progress id="tiktok-ads" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="tiktok-ads-percent">0%</div>
+                </div>
+            </div>
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-youtube mb-3"></i>
+                    <h5 class="card-title">YouTube Ads</h5>
+                    <progress id="youtube-ads" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="youtube-ads-percent">0%</div>
+                </div>
+            </div>
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-google mb-3"></i>
+                    <h5 class="card-title">Google Ads</h5>
+                    <progress id="google-ads" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="google-ads-percent">0%</div>
+                </div>
+            </div>
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-search mb-3"></i>
+                    <h5 class="card-title">Google Search Console</h5>
+                    <progress id="google-search-console" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="google-search-console-percent">0%</div>
+                </div>
+            </div>
+            <div class="skills-card text-center shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-tag mb-3"></i>
+                    <h5 class="card-title">Google Tag Manager</h5>
+                    <progress id="google-tag-manager" class="progress-bar" value="0" max="100"
+                        style="width: 100%; height: 10px;"></progress>
+                    <div class="text-center" id="google-tag-manager-percent">0%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section class="projects py-5" id="projects">
+        <h2 class="text-center mb-5">Our Projects</h2>
+        <div class="projects-row">
+            <div class="projects-card shadow-sm">
+                <img src="images/Dev-minds.png" class="card-img-top" alt="Project 1">
+                <div class="card-body">
+                    <h5 class="card-title">Dev-Minds</h5>
+                    <span class="sub-card-title"> (Portfolio Website)</span>
+                    <p class="card-text">Description of the first project goes here. It can be a short summary
+                        of what this project is about.</p>
+                </div>
+            </div>
+            <div class="projects-card shadow-sm">
+                <img src="images/Canva.png" class="card-img-top" alt="Project 2">
+                <div class="card-body">
+                    <h5 class="card-title">Graphic Design Project</h5>
+                    <span class="sub-card-title"> (Yalla7 The e-commerce Store)</span>
+                    <p class="card-text">Description of the second project goes here. It can be a short summary
+                        of what this project is about.</p>
+                </div>
+            </div>
+            <div class="projects-card shadow-sm">
+                <img src="images/DUH.png" class="card-img-top" alt="Project 3">
+                <div class="card-body">
+                    <h5 class="card-title">DUH</h5>
+                    <span class="sub-card-title"> (School Website)</span>
+                    <p class="card-text">Description of the third project goes here. It can be a short summary
+                        of what this project is about.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="text-center mb-5">Contact Me</h2>
+        <p class="text-center mb-5">If you have any questions or want to work together, feel free to get in touch!
+        </p>
+
+        <div class="contact-row">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><strong>Mobile:</strong> +92 312 6644034</li>
+                    <li><strong>Email:</strong> ahmadmuneebnasir786@gmail.com</li>
+                    <li><strong>Address:</strong> liaqat town D Block House # 109, FAISALABAD, Punjab, Pakistan
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ahmad Muneeb. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/devmindsinstitute/" target="_blank" class="social-link facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://wa.me/+923126644034" target="_blank" class="social-link whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.linkedin.com/in/ahmadmuneeb-dev/" target="_blank" class="social-link linkedin">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@latest/dist/email.min.js"></script>
+    <script src="./script.js"></script>
+
+    <!-- Bootstrap JS Bundle (includes Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Typed.js for text animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        new Typed(".auto-type", {
+            strings: ['Web Developer.', 'Graphics Designer.', 'Digital Marketer.'],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        });
+    </script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
